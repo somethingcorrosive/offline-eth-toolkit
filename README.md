@@ -4,7 +4,6 @@
 This is a work in progress
 ---
 
-
 ---
 A set of small, composable CLI utilities for building, signing, broadcasting, and inspecting Ethereum/Polygon transactions.
 
@@ -56,7 +55,7 @@ cargo install --path .
 
 ```bash
 ./tx_builder \
-  --to 0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef \
+  --to $ADDRESS \
   --value 0.01 \
   --gas-price 30 \
   --gas-limit 21000 \
@@ -71,7 +70,7 @@ This writes an **RLP preimage hex string** into `unsigned_legacy.txt`.
 
 ```bash
 ./tx_builder \
-  --to 0x000000000000000000000000000000000000dEaD \
+  --to $ADDRESS \
   --value 0.01 \
   --gas-limit 21000 \
   --nonce 1 \
@@ -100,7 +99,7 @@ Optionally, print a QR code for offline transfer:
 ./tx_signer \
   --input unsigned_legacy.txt \
   --output signed_tx.txt \
-  --private-key <private_key>
+  --private-key <hex_private_key>
 ```
 
 #### Sign from QR ( WIP ) 
@@ -150,7 +149,7 @@ Example:
 ./tx_inspector --input signed_tx.txt
 ```
 
-Output might include:
+Output might include(example):
 
 ```
 Signed legacy transaction decoded:
@@ -176,6 +175,7 @@ Recovered sender: 0x1234...
         --gas-limit 21000 --nonce 5 --chain-id 1 --output unsigned.txt --qr
       ```
     - Transfer the unsigned QR or file to the **signer device**.
+    - **Working on fix for QR ingestion consistency **
 
 2. On a **signer device** (can also be offline):
     - Sign the preimage:
