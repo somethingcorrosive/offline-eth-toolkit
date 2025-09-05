@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "tx_builder",
+    "tx_signer",
+    "tx_broadcaster",
+    "tx_inspector"
+]
+
+resolver = "2"
+
+[workspace.dependencies]
+image = { version = "0.23.14", optional = false }

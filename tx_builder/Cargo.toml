@@ -1,0 +1,13 @@
+[package]
+name = "tx_builder"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+ethers = "2"
+eyre = "0.6"
+hex = "0.4"
+rlp = "0.5"
+qrcode = "0.12"
+image = { workspace = true }

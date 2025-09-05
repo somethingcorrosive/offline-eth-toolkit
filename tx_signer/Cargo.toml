@@ -1,0 +1,15 @@
+[package]
+name = "tx_signer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+ethers = "2"
+eyre = "0.6"
+hex = "0.4"
+rlp = "0.5"
+qrcode = { version = "0.12"}
+quircs = "0.10"
+rqrr = "0.4.0"
+image = { version = "0.23.14", optional = false }

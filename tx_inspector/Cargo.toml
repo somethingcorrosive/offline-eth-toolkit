@@ -1,0 +1,11 @@
+[package]
+name = "tx_inspector"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+ethers = "2"
+hex = "0.4"
+eyre = "0.6"
+rlp = "0.5"
