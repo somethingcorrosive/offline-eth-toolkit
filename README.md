@@ -165,7 +165,14 @@ Recovered sender: 0x1234...
 ```
 
 ---
+Example Docker Command 
+---
 
+```shell
+docker run --rm -it offline-eth-toolkit tx_builder --help
+
+```
+---
 ## Example Offline Workflow
 
 1. On an **offline machine**:
